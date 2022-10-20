@@ -1,0 +1,44 @@
+<h2>Rapport List</h2>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let rapport of rapports" >
+            <td>{{rapport.id}}</td>
+            <td>{{rapport.title}}</td>
+            <td>{{rapport.subject}}</td>
+        </tr>
+    </tbody>
+
+</table>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let rapport of rapports"  scope="row">
+            <td>{{rapport.id}}</td>
+            <td>{{rapport.title}}</td>
+            <td>{{rapport.subject}}</td>
+            <td>
+                <button type="button" class="btn btn-success">view</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-warning">Update</button>
+            </td>
+  </tr>
+
+  </tbody>
+</table>
